@@ -5,7 +5,7 @@
     python tools/import_subject_banks.py sources app/src/main/assets/banks
 
 源文件分两套格式：
-  A) 小学「通用（人教版知识点）」：type = choice / fill，字段 text/options/answerIndex/answer/explanation。
+  A) 小学「通用（课标知识点）」：type = choice / fill，字段 text/options/answerIndex/answer/explanation。
   B) 初中「标准化试卷」(schemaVersion)：type = single_choice / cloze / reading / experiment /
      blank / multi_choice / short_answer / essay / graph / calculation / proof，
      answer 是对象，部分题带 passage（阅读材料）与 assets（占位图）。
@@ -262,11 +262,11 @@ def main():
         meta = {
             "stage": "primary", "grade_id": grade_id, "grade_label": grade_label,
             "term": "shang", "subject": "MATH", "subject_label": "数学",
-            "edition": src_meta.get("edition", "通用（人教版知识点）"),
+            "edition": src_meta.get("edition", "通用（课标知识点）"),
             "total": len(items),
             "source": SOURCE_DIR_NOTE + "：「%s」" % src_meta.get("grade", grade_label + "上册") + "数学题库",
             "note": "原题库 %d 题，其中 %d 道填空已转为 4 选 1（origin=fill_to_choice）；"
-                    "跳过 %d 道格式不合法题。题目数据为通用人教版知识点整理，请对照实际教材核验。"
+                    "跳过 %d 道格式不合法题。题目数据为通用课标知识点整理，请对照实际教材核验。"
                     % (st["source_total"], st["converted"], st["skipped"]),
         }
         rel = os.path.join("primary", grade_id, "shang", "math.json")
@@ -280,7 +280,7 @@ def main():
         meta = {
             "stage": "junior", "grade_id": "grade7", "grade_label": "七年级",
             "term": "shang", "subject": subject, "subject_label": label,
-            "edition": src_meta.get("edition", "人教版"),
+            "edition": src_meta.get("edition", "通用（课标知识点）"),
             "total": len(items),
             "source": SOURCE_DIR_NOTE + "：「七年级上册%s题库」（标准化试卷格式）" % label,
             "note": "原试卷 %d 题；保留单选/完形/阅读/实验等客观题 %d 道，%d 道填空转为 4 选 1"

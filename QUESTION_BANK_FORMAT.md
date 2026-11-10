@@ -66,12 +66,12 @@ meta 写了什么就按什么归类；没写则按「目录里的学段名 / 册
 
 | 路径 | 归类 | 题数 |
 |---|---|---|
-| `primary/grade2/shang/math.json` | 小学 · 二年级 · 上册 · 数学 · **人教版** | 10586（选择题 10564） |
-| `primary/grade1~grade6/{shang,xia}/english.json` | 小学 · 一~六年级 · 上下册 · 英语 · **人教版（一年级起点）** | 1092（12 个文件） |
-| `primary/grade1~grade6/{shang,xia}/chinese.json` | 小学 · 一~六年级 · 上下册 · 语文 · **人教版（统编/部编版）** | 3023（12 个文件） |
+| `primary/grade2/shang/math.json` | 小学 · 二年级 · 上册 · 数学 · **对应教材版本** | 10586（选择题 10564） |
+| `primary/grade1~grade6/{shang,xia}/english.json` | 小学 · 一~六年级 · 上下册 · 英语 · **一年级起点体系** | 1092（12 个文件） |
+| `primary/grade1~grade6/{shang,xia}/chinese.json` | 小学 · 一~六年级 · 上下册 · 语文 · **统编体系** | 3023（12 个文件） |
 | `primary/shared/all/{chinese,english}.json` | 小学 · 综合专项（`grade_id=shared`，v1.0.12 起并入「综合（跨年级）」聚合池） · 全册 · 语文 51 / 英语 40 | 91 |
-| `primary/grade{1,3,4,5,6}/shang/math.json` | 小学 · 一/三/四/五/六年级 · 上册 · 数学 · **通用（人教版知识点）** | 6234（5 册） |
-| `junior/grade7/shang/*.json` | 初中 · 七年级 · 上册 · **7 科** · 人教版 / 统编版 | 170（7 个文件） |
+| `primary/grade{1,3,4,5,6}/shang/math.json` | 小学 · 一/三/四/五/六年级 · 上册 · 数学 · **通用（课标知识点）** | 6234（5 册） |
+| `junior/grade7/shang/*.json` | 初中 · 七年级 · 上册 · **7 科** · 对应教材版本 | 170（7 个文件） |
 
 > v1.0.15 起移除了 `primary/sample/` 示例年级：它与代码内硬编码的 24 道兜底题
 > （`QuestionBank.kt` 内的 `builtin` 列表，三科各 8 题）重复，删掉后年级列表不再出现「示例年级」。
@@ -101,7 +101,7 @@ meta 写了什么就按什么归类；没写则按「目录里的学段名 / 册
     "term": "shang",
     "subject": "PHYSICS",
     "subject_label": "物理",
-    "edition": "人教版",
+    "edition": "通用（课标知识点）",
     "total": 120
   },
   "questions": [
@@ -152,7 +152,7 @@ meta 写了什么就按什么归类；没写则按「目录里的学段名 / 册
 | `subject` | string | 科目 id 或中文名，见下表 | 文件名（去掉 `.json`） |
 | `subject_label` | string | 显示名；**自定义科目必填**，如 `通用技术` | 枚举 label 或科目原文 |
 | `subject_key` | string | 自定义科目的持久化 key（同年级下多个自定义科目不能重名） | `subject_label` |
-| `edition` | string | 教材版本，如 `人教版`、`北师大版`，会显示在家长台范围描述里 | 空 |
+| `edition` | string | 教材版本，如 `通用（课标知识点）`、`对应教材版本`，会显示在家长台范围描述里 | 空 |
 | `total` | number | 题数备注，仅供人查阅，**引擎不校验** | — |
 | 其它字段 | any | `chapter_counts` / `question_types` / `label_counts` 等统计信息可自由保留 | — |
 
@@ -218,7 +218,7 @@ meta 写了什么就按什么归类；没写则按「目录里的学段名 / 册
 ```bash
 mkdir -p app/src/main/assets/banks/primary/grade3/shang
 # 把 math.json 放进去，meta 至少写：
-# {"meta":{"grade_label":"三年级","term":"shang","subject":"MATH","edition":"人教版"},"questions":[...]}
+# {"meta":{"grade_label":"三年级","term":"shang","subject":"MATH","edition":"通用（课标知识点）"},"questions":[...]}
 ```
 
 ### 给某年级补下册 / 补科目

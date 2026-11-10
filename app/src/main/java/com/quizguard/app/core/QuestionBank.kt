@@ -201,7 +201,7 @@ object QuestionBank {
             .joinToString(" · ") { "${it.label} ${it.questions.size} 题" } + "　共 $total 题"
     }
 
-    /** 当前范围的完整中文描述，如「小学 · 二年级 · 上册 · 数学 · 人教版」 */
+    /** 当前范围的完整中文描述，如「小学 · 二年级 · 上册 · 数学 · 通用（课标知识点）」 */
     fun describe(sel: BankSelection): String {
         val files = resolve(sel)
         val stageLabel = sel.stage.label

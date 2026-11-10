@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""把「人教版一至六年级语文题库.json」拆成 QuizGuard 四级 Catalog 题库。
+"""把「对应教材版本一至六年级语文题库.json」拆成 QuizGuard 四级 Catalog 题库。
 
 可复现导入（在工程根目录执行）：
     python tools/import_chinese_bank.py sources/chinese_grade1-6_source.json app/src/main/assets/banks
@@ -30,8 +30,8 @@ GRADES = {
     "综合": "shared",
 }
 TERMS = {"上册": ("shang", "shang"), "下册": ("xia", "xia"), "—": ("all", "all")}
-EDITION = "人教版（统编/部编版）"
-SOURCE = "人教版一至六年级语文题库（资料库提供）"
+EDITION = "统编体系"
+SOURCE = "对应教材版本一至六年级语文题库（资料库提供）"
 SHARED_LABEL = "综合（跨年级）"
 
 HANZI_RE = re.compile(r"[\u4e00-\u9fff]")

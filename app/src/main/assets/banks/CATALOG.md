@@ -6,24 +6,24 @@
 
 | 路径 | 学段 | 年级 | 册别 | 科目 | 教材 | 题数 |
 |---|---|---|---|---|---|---|
-| `primary/grade2/shang/math.json` | 小学 | 二年级 | 上册 | 数学 | 人教版 | 10586（选择题 10564） |
-| `primary/grade1/shang/english.json` | 小学 | 一年级 | 上册 | 英语 | 人教版（一年级起点） | 160 |
-| `primary/grade1/xia/english.json` | 小学 | 一年级 | 下册 | 英语 | 人教版（一年级起点） | 100 |
-| `primary/grade2/shang/english.json` | 小学 | 二年级 | 上册 | 英语 | 人教版（一年级起点） | 60 |
-| `primary/grade2/xia/english.json` | 小学 | 二年级 | 下册 | 英语 | 人教版（一年级起点） | 69 |
-| `primary/grade3/shang/english.json` | 小学 | 三年级 | 上册 | 英语 | 人教版（一年级起点） | 69 |
-| `primary/grade3/xia/english.json` | 小学 | 三年级 | 下册 | 英语 | 人教版（一年级起点） | 60 |
-| `primary/grade4/shang/english.json` | 小学 | 四年级 | 上册 | 英语 | 人教版（一年级起点） | 90 |
-| `primary/grade4/xia/english.json` | 小学 | 四年级 | 下册 | 英语 | 人教版（一年级起点） | 55 |
-| `primary/grade5/shang/english.json` | 小学 | 五年级 | 上册 | 英语 | 人教版（一年级起点） | 147 |
-| `primary/grade5/xia/english.json` | 小学 | 五年级 | 下册 | 英语 | 人教版（一年级起点） | 86 |
-| `primary/grade6/shang/english.json` | 小学 | 六年级 | 上册 | 英语 | 人教版（一年级起点） | 95 |
-| `primary/grade6/xia/english.json` | 小学 | 六年级 | 下册 | 英语 | 人教版（一年级起点） | 101 |
-| `primary/grade1~grade6/{shang,xia}/chinese.json` | 小学 | 一~六年级 | 上下册 | 语文 | 人教版（统编/部编版） | 3023（12 册，详见下表） |
-| `primary/shared/all/chinese.json` | 小学 | 综合专项（`shared`，并入跨年级池） | 全册 | 语文 | 人教版（统编/部编版） | 51 |
-| `primary/shared/all/english.json` | 小学 | 综合专项（`shared`，并入跨年级池） | 全册 | 英语 | 人教版（一年级起点） | 40 |
-| `primary/grade{1,3,4,5,6}/shang/math.json` | 小学 | 一 / 三 / 四 / 五 / 六年级 | 上册 | 数学 | 通用（人教版知识点） | 6234（5 册） |
-| `junior/grade7/shang/*.json` | 初中 | 七年级 | 上册 | 语文 / 数学 / 英语 / 道法 / 历史 / 地理 / 生物 | 人教版 / 统编版 | 170（7 科） |
+| `primary/grade2/shang/math.json` | 小学 | 二年级 | 上册 | 数学 | 对应教材版本 | 10586（选择题 10564） |
+| `primary/grade1/shang/english.json` | 小学 | 一年级 | 上册 | 英语 | 一年级起点体系 | 160 |
+| `primary/grade1/xia/english.json` | 小学 | 一年级 | 下册 | 英语 | 一年级起点体系 | 100 |
+| `primary/grade2/shang/english.json` | 小学 | 二年级 | 上册 | 英语 | 一年级起点体系 | 60 |
+| `primary/grade2/xia/english.json` | 小学 | 二年级 | 下册 | 英语 | 一年级起点体系 | 69 |
+| `primary/grade3/shang/english.json` | 小学 | 三年级 | 上册 | 英语 | 一年级起点体系 | 69 |
+| `primary/grade3/xia/english.json` | 小学 | 三年级 | 下册 | 英语 | 一年级起点体系 | 60 |
+| `primary/grade4/shang/english.json` | 小学 | 四年级 | 上册 | 英语 | 一年级起点体系 | 90 |
+| `primary/grade4/xia/english.json` | 小学 | 四年级 | 下册 | 英语 | 一年级起点体系 | 55 |
+| `primary/grade5/shang/english.json` | 小学 | 五年级 | 上册 | 英语 | 一年级起点体系 | 147 |
+| `primary/grade5/xia/english.json` | 小学 | 五年级 | 下册 | 英语 | 一年级起点体系 | 86 |
+| `primary/grade6/shang/english.json` | 小学 | 六年级 | 上册 | 英语 | 一年级起点体系 | 95 |
+| `primary/grade6/xia/english.json` | 小学 | 六年级 | 下册 | 英语 | 一年级起点体系 | 101 |
+| `primary/grade1~grade6/{shang,xia}/chinese.json` | 小学 | 一~六年级 | 上下册 | 语文 | 统编体系 | 3023（12 册，详见下表） |
+| `primary/shared/all/chinese.json` | 小学 | 综合专项（`shared`，并入跨年级池） | 全册 | 语文 | 统编体系 | 51 |
+| `primary/shared/all/english.json` | 小学 | 综合专项（`shared`，并入跨年级池） | 全册 | 英语 | 一年级起点体系 | 40 |
+| `primary/grade{1,3,4,5,6}/shang/math.json` | 小学 | 一 / 三 / 四 / 五 / 六年级 | 上册 | 数学 | 通用（课标知识点） | 6234（5 册） |
+| `junior/grade7/shang/*.json` | 初中 | 七年级 | 上册 | 语文 / 数学 / 英语 / 道法 / 历史 / 地理 / 生物 | 对应教材版本 | 170（7 科） |
 
 > v1.0.15 起移除了 `primary/sample/` 示例年级（三科各 8 题）：它与代码内硬编码的
 > 24 道兜底题（`QuestionBank.kt` 内的 `builtin` 列表）内容重复，删掉后年级列表不再出现「示例年级」，
@@ -46,7 +46,7 @@
 > （题干、正确答案、解析不变）。旧源备份为 `sources/english_grade1-6_source_v1.json`，
 > 新源为 `sources/english_grade1-6_source.json`，重跑 `tools/import_english_bank.py` 即得到当前 13 个文件。
 
-来源：资料库「人教版一至六年级英语题库.json」，`meta.edition = 人教版（一年级起点）`，
+来源：资料库「对应教材版本一至六年级英语题库.json」，`meta.edition = 一年级起点体系`，
 按 `grade` + `volume` 拆成 12 个「年级 / 册别」文件，「综合 · 词汇分类」40 题单列为一个年级。
 
 原文件含 `choice` 810 题与 `fill`（词义填空）322 题；App 只加载选择题，因此导入时把
@@ -58,7 +58,7 @@
 
 ## 语文题库说明（v1.0.10 接入）
 
-来源：资料库「人教版一至六年级语文题库.json」，`meta.edition = 人教版（统编/部编版）`，
+来源：资料库「对应教材版本一至六年级语文题库.json」，`meta.edition = 统编体系`，
 按 `grade` + `volume` 拆成 12 个「年级 / 册别」文件，「综合」51 题归入 `shared/all`。
 
 | 年级 | 上册 | 下册 | 合计 |
@@ -84,7 +84,7 @@
 
 **小学数学上册 5 册（6234 题）**：一年级 206、三年级 2189、四年级 1451、五年级 1359、六年级 1029。
 格式与原有二年级数学库一致，几乎全是 4 选 1；一年级 6 道填空已转为选择题。
-`meta.edition = 通用（人教版知识点）`，题目为知识点整理，请对照实际教材核验。
+`meta.edition = 通用（课标知识点）`，题目为知识点整理，请对照实际教材核验。
 
 **初中七年级上册 7 科（170 题可用）**：语文 26 / 数学 21 / 英语 29 / 道德与法治 23 /
 历史 22 / 地理 25 / 生物 24。源文件采用「标准化试卷格式」（`schemaVersion`、知识点编码、
@@ -153,7 +153,7 @@ banks/
     "term": "shang",
     "subject": "PHYSICS",
     "subject_label": "物理",
-    "edition": "人教版",
+    "edition": "通用（课标知识点）",
     "total": 120
   },
   "questions": [ ... ]

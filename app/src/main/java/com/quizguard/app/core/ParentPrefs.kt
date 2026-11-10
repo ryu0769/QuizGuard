@@ -57,7 +57,7 @@ object ParentPrefs {
 
     /**
      * 当前题库范围（学段 → 年级 → 册别 → 科目）。
-     * 默认指向「小学 / 二年级 / 上册 / 数学」，即内置的二年级上册人教版数学题库。
+     * 默认指向「小学 / 二年级 / 上册 / 数学」，即内置的 10586 题数学算式库。
      */
     fun getSelection(): BankSelection = BankSelection(
         stage = Stage.from(sp.getString(KEY_STAGE, Stage.PRIMARY.id)),

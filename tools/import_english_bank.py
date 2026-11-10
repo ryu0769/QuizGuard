@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""把「人教版一至六年级英语题库.json」拆成 QuizGuard 四级 Catalog 题库。
+"""把「对应教材版本一至六年级英语题库.json」拆成 QuizGuard 四级 Catalog 题库。
 
 可复现导入（在工程根目录执行）：
     python tools/import_english_bank.py sources/english_grade1-6_source.json app/src/main/assets/banks
@@ -21,8 +21,8 @@ GRADES = {
     "综合": "shared",
 }
 TERMS = {"上册": ("shang", "shang"), "下册": ("xia", "xia"), "—": ("all", "all")}
-EDITION = "人教版（一年级起点）"
-SOURCE = "人教版一至六年级英语题库（资料库提供）"
+EDITION = "一年级起点体系"
+SOURCE = "对应教材版本一至六年级英语题库（资料库提供）"
 SHARED_LABEL = "综合（跨年级）"  # 与语文题库共用同一个 grade_id=shared，显示名必须一致
 
 
