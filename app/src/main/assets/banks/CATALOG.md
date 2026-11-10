@@ -6,7 +6,7 @@
 
 | 路径 | 学段 | 年级 | 册别 | 科目 | 教材 | 题数 |
 |---|---|---|---|---|---|---|
-| `primary/grade2/shang/math.json` | 小学 | 二年级 | 上册 | 数学 | 对应教材版本 | 10586（选择题 10564） |
+| `primary/grade2/shang/math.json` | 小学 | 二年级 | 上册 | 数学 | 教材版本 | 10586（选择题 10564） |
 | `primary/grade1/shang/english.json` | 小学 | 一年级 | 上册 | 英语 | 一年级起点体系 | 160 |
 | `primary/grade1/xia/english.json` | 小学 | 一年级 | 下册 | 英语 | 一年级起点体系 | 100 |
 | `primary/grade2/shang/english.json` | 小学 | 二年级 | 上册 | 英语 | 一年级起点体系 | 60 |
@@ -23,7 +23,7 @@
 | `primary/shared/all/chinese.json` | 小学 | 综合专项（`shared`，并入跨年级池） | 全册 | 语文 | 统编体系 | 51 |
 | `primary/shared/all/english.json` | 小学 | 综合专项（`shared`，并入跨年级池） | 全册 | 英语 | 一年级起点体系 | 40 |
 | `primary/grade{1,3,4,5,6}/shang/math.json` | 小学 | 一 / 三 / 四 / 五 / 六年级 | 上册 | 数学 | 通用（课标知识点） | 6234（5 册） |
-| `junior/grade7/shang/*.json` | 初中 | 七年级 | 上册 | 语文 / 数学 / 英语 / 道法 / 历史 / 地理 / 生物 | 对应教材版本 | 170（7 科） |
+| `junior/grade7/shang/*.json` | 初中 | 七年级 | 上册 | 语文 / 数学 / 英语 / 道法 / 历史 / 地理 / 生物 | 教材版本 | 170（7 科） |
 
 > v1.0.15 起移除了 `primary/sample/` 示例年级（三科各 8 题）：它与代码内硬编码的
 > 24 道兜底题（`QuestionBank.kt` 内的 `builtin` 列表）内容重复，删掉后年级列表不再出现「示例年级」，
@@ -46,7 +46,7 @@
 > （题干、正确答案、解析不变）。旧源备份为 `sources/english_grade1-6_source_v1.json`，
 > 新源为 `sources/english_grade1-6_source.json`，重跑 `tools/import_english_bank.py` 即得到当前 13 个文件。
 
-来源：资料库「对应教材版本一至六年级英语题库.json」，`meta.edition = 一年级起点体系`，
+来源：资料库「教材版本一至六年级英语题库.json」，`meta.edition = 一年级起点体系`，
 按 `grade` + `volume` 拆成 12 个「年级 / 册别」文件，「综合 · 词汇分类」40 题单列为一个年级。
 
 原文件含 `choice` 810 题与 `fill`（词义填空）322 题；App 只加载选择题，因此导入时把
@@ -58,7 +58,7 @@
 
 ## 语文题库说明（v1.0.10 接入）
 
-来源：资料库「对应教材版本一至六年级语文题库.json」，`meta.edition = 统编体系`，
+来源：资料库「教材版本一至六年级语文题库.json」，`meta.edition = 统编体系`，
 按 `grade` + `volume` 拆成 12 个「年级 / 册别」文件，「综合」51 题归入 `shared/all`。
 
 | 年级 | 上册 | 下册 | 合计 |
