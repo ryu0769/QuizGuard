@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">刷吧!少年</string>
+    <string name="brand_name">shuaba.app</string>
+    <string name="admin_desc">刷吧!少年（shuaba.app）用于儿童手机时长管控，需要设备管理员权限以开启不可退出的锁定模式。</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4CAF50</color>
+    <color name="colorPrimaryDark">#388E3C</color>
+    <color name="colorAccent">#FF6F00</color>
+    <!-- 自适应图标背景：暖深棕，与夜读插画暗部衔接，避免圆形遮罩外露出突兀色块 -->
+    <color name="ic_launcher_background">#2B2621</color>
+</resources>

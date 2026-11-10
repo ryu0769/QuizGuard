@@ -1,0 +1,25 @@
+# ===== Build & cache =====
+app/build/
+build/
+.gradle/
+.kotlin/
+local.properties
+*.log
+
+# ===== Binaries / releases =====
+# APK 不进版本库，改走 GitHub Releases 发布
+*.apk
+releases/
+
+# ===== 题库源数据（版权：人教版教材题，不随源码开源）=====
+# 原始题源 JSON 与可复现素材
+sources/
+# assets/banks 下所有真实教材题库 JSON 排除，仅保留说明文档
+app/src/main/assets/banks/*
+!app/src/main/assets/banks/CATALOG.md
+!app/src/main/assets/banks/README.md
+
+# ===== OS / IDE =====
+.DS_Store
+*.iml
+.idea/

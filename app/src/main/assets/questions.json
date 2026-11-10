@@ -1,0 +1,28 @@
+[
+  {"id":"c1","subject":"CHINESE","text":"下面哪个字的读音是 mā？","options":["妈","爸","哥","弟"],"answerIndex":0,"explanation":"‘妈’读 mā。"},
+  {"id":"c2","subject":"CHINESE","text":"‘春’字共有几画？","options":["8画","9画","10画","11画"],"answerIndex":1,"explanation":"春共9画：横、横、横、撇、捺、竖、横折、横、横。"},
+  {"id":"c3","subject":"CHINESE","text":"下面哪个是表示动作的词？","options":["红色","跑","书","大"],"answerIndex":1,"explanation":"‘跑’是动作。"},
+  {"id":"c4","subject":"CHINESE","text":"‘明白’的近义词是？","options":["清楚","黑暗","糊涂","大小"],"answerIndex":0,"explanation":"明白=清楚。"},
+  {"id":"c5","subject":"CHINESE","text":"下面哪个是标点符号？","options":["水","山","。","风"],"answerIndex":2,"explanation":"‘。’是句号。"},
+  {"id":"c6","subject":"CHINESE","text":"‘木’加一笔可以变成哪个字？","options":["本","月","日","口"],"answerIndex":0,"explanation":"木加一横成‘本’。"},
+  {"id":"c7","subject":"CHINESE","text":"下列哪个词语描写天气？","options":["下雨","吃饭","读书","跑步"],"answerIndex":0,"explanation":"下雨是天气。"},
+  {"id":"c8","subject":"CHINESE","text":"‘大’的反义词是？","options":["小","多","高","长"],"answerIndex":0,"explanation":"大的反义是小。"},
+
+  {"id":"m1","subject":"MATH","text":"3 + 5 = ?","options":["7","8","9","15"],"answerIndex":1,"explanation":"3+5=8。"},
+  {"id":"m2","subject":"MATH","text":"12 - 7 = ?","options":["4","5","6","7"],"answerIndex":1,"explanation":"12-7=5。"},
+  {"id":"m3","subject":"MATH","text":"下面哪个数最大？","options":["19","91","29","90"],"answerIndex":1,"explanation":"91最大。"},
+  {"id":"m4","subject":"MATH","text":"2 × 3 = ?","options":["5","6","8","9"],"answerIndex":1,"explanation":"2×3=6。"},
+  {"id":"m5","subject":"MATH","text":"一个三角形有几条边？","options":["2条","3条","4条","5条"],"answerIndex":1,"explanation":"三角形有3条边。"},
+  {"id":"m6","subject":"MATH","text":"哪组两个数相加等于15？","options":["7和8","6和7","5和9","4和8"],"answerIndex":0,"explanation":"7+8=15。"},
+  {"id":"m7","subject":"MATH","text":"钟面上时针指向3，分针指向12，是几点？","options":["3点","6点","9点","12点"],"answerIndex":0,"explanation":"时针3分针12是3点。"},
+  {"id":"m8","subject":"MATH","text":"下面哪个是双数？","options":["7","8","9","11"],"answerIndex":1,"explanation":"8是双数。"},
+
+  {"id":"e1","subject":"ENGLISH","text":"苹果用英语说是？","options":["apple","banana","orange","pear"],"answerIndex":0,"explanation":"苹果=apple。"},
+  {"id":"e2","subject":"ENGLISH","text":"‘cat’是什么意思？","options":["猫","狗","猪","鸟"],"answerIndex":0,"explanation":"cat=猫。"},
+  {"id":"e3","subject":"ENGLISH","text":"下面哪个是颜色？","options":["red","book","pen","desk"],"answerIndex":0,"explanation":"red=红色。"},
+  {"id":"e4","subject":"ENGLISH","text":"‘one, two, ___’ 下一个是？","options":["three","ten","six","nine"],"answerIndex":0,"explanation":"1,2,3 = three。"},
+  {"id":"e5","subject":"ENGLISH","text":"太阳用英语说是？","options":["sun","moon","star","sky"],"answerIndex":0,"explanation":"太阳=sun。"},
+  {"id":"e6","subject":"ENGLISH","text":"‘hello’的意思是？","options":["你好","再见","谢谢","对不起"],"answerIndex":0,"explanation":"hello=你好。"},
+  {"id":"e7","subject":"ENGLISH","text":"下面哪个是数字5？","options":["five","four","six","two"],"answerIndex":0,"explanation":"5=five。"},
+  {"id":"e8","subject":"ENGLISH","text":"‘dog’和‘cat’都是什么？","options":["动物","水果","颜色","学校"],"answerIndex":0,"explanation":"狗和猫都是动物。"}
+]

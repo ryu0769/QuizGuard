@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 前台服务：Android 14 必须声明类型与对应权限。
+         v1.0.14：类型改为 specialUse（家长管控），规避 Android 15 对 dataSync 的 6 小时/24h 上限 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <!-- v1.0.14 机型适配：申请电池优化豁免（避免 Doze / 省电模式冻结守护进程） -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <!-- Android 13+ 发送通知（含到点强提醒）必需；未授权则提醒不弹 -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <!-- 全屏 intent 提醒（闹钟式弹出）；普通权限 -->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <!-- 到点提醒的震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 悬浮窗权限：当前用 Activity 弹出模式，无需强制；保留以备后续增强 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <!-- 保持屏幕常亮用，非必需 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- v1.0.11 守护看门狗：进程被最近任务清掉后靠闹钟复活，开机后自动恢复守护 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <application
+        android:name=".QuizGuardApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.QuizGuard"
+        tools:targetApi="34">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.QuizGuard"
+            android:launchMode="singleTask"
+            android:lockTaskMode="if_whitelisted"
+            android:showOnLockScreen="true"
+            android:turnScreenOn="true"
+            android:keepScreenOn="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 前台守护服务：保活 + 常驻通知，使倒计时在后台不被回收。
+             v1.0.14：specialUse 更贴合「家长管控」用途，且无 dataSync 的 6 小时时长上限 -->
+        <service
+            android:name=".GuardService"
+            android:exported="false"
+            android:foregroundServiceType="specialUse">
+            <property
+                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+                android:value="parental_control" />
+        </service>
+
+        <!-- v1.0.11 看门狗：静态接收器，进程被杀后仍可被闹钟 / 开机广播唤醒并恢复守护 -->
+        <receiver
+            android:name=".core.GuardWatchdog"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 设备所有者（Device Owner）升级路径：用于“彻底锁死、无法退出”的 kiosk 模式 -->
+        <receiver
+            android:name=".AdminReceiver"
+            android:permission="android.permission.BIND_DEVICE_ADMIN"
+            android:exported="false"
+            android:description="@string/admin_desc"
+            android:label="@string/app_name">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

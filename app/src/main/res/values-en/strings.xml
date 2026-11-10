@@ -1,0 +1,6 @@
+<resources>
+    <!-- English app label: shown on devices whose system language is English. -->
+    <string name="app_name">shuaba.app</string>
+    <string name="brand_name">shuaba.app</string>
+    <string name="admin_desc">shuaba.app helps parents manage screen time for children. Device administrator permission is required for the non-exitable kiosk mode.</string>
+</resources>
