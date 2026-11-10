@@ -26,16 +26,12 @@ app/src/main/assets/banks/
 │   └── grade2/                           ← 年级 id，建议 grade1…grade12（数字用于排序）
 │       ├── shang/                        ← 册别目录：shang 上册 / xia 下册 / all 全册
 │       │   ├── math.json                 ← 科目文件名 = 科目 id
-│       │   ├── chinese.json
-│       │   └── english.json
 │       └── xia/
 │           └── math.json
 ├── junior/                               ← 初中（七年级 ~ 九年级）接入位
 │   └── grade7/
 │       └── shang/
-│           ├── chinese.json
 │           ├── math.json
-│           ├── english.json
 │           ├── biology.json
 │           ├── geography.json
 │           └── politics.json
@@ -210,12 +206,10 @@ mkdir -p app/src/main/assets/banks/primary/grade3/shang
 
 ```
 primary/grade2/xia/math.json          # 二年级下册数学（尚无）
-primary/grade2/shang/english.json     # 二年级上册英语（v1.0.7 已有）
-primary/grade2/shang/chinese.json     # 二年级上册语文（v1.0.10 已有）
 ```
 
 放好新文件后家长台对应选项会自动由置灰变为可选；选「全部科目」即多科混合出题。
-二年级上册现已是**语文 + 数学 + 英语三科混合**，一至六年级语文 / 英语上下册与**数学上册**全部齐备，
+同一目录下放多个科目的 JSON 即可混合出题，各科目文件按四级目录归类；本仓库只随源码提供 `math.json` 一份。
 可直接参考它们的 `meta` 写法；二年级下册数学等仍为接入位。
 初中 `junior/grade7/shang/` 已有 7 科 170 题，学段「初中」在家长台已可选；
 其源文件为标准化试卷格式（题型 `single_choice / cloze / reading / blank / multi_choice / ...`），
