@@ -6,9 +6,9 @@
     "term": "shang",
     "subject": "MATH",
     "subject_label": "数学",
-    "edition": "人教版",
+    "edition": "通用（课标知识点）",
     "grade": "二年级上册",
-    "edition_note": "原文件自述：通用（人教版知识点）",
+    "edition_note": "按义务教育数学课程标准知识点范围穷举生成的算式组合，不含教材原题；章节名仅作知识点索引",
     "total": 10586,
     "chapter_counts": {
       "长度单位": 14,
