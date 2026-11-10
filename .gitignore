@@ -14,10 +14,10 @@ releases/
 # ===== 题库源数据（版权：人教版教材题，不随源码开源）=====
 # 原始题源 JSON 与可复现素材
 sources/
-# assets/banks 下所有真实教材题库 JSON 排除，仅保留说明文档
-app/src/main/assets/banks/*
-!app/src/main/assets/banks/CATALOG.md
-!app/src/main/assets/banks/README.md
+# assets/banks 下真实教材题库 JSON 默认排除（版权：人教版教材题）
+# 例外：二年级上册数学（用户 2026-11-10 确认加入，风险自负）
+app/src/main/assets/banks/**/*.json
+!app/src/main/assets/banks/primary/grade2/shang/math.json
 
 # ===== OS / IDE =====
 .DS_Store
