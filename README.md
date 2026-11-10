@@ -716,7 +716,7 @@ sources/app-avatar-night-study.png
 1. 覆盖安装后进家长台（1234）→ 年级列表应**只有** 一年级 ~ 六年级 + 综合（跨年级），无「示例年级」；
 2. 切到任一正常年级（如二年级上册）→ 统计栏题数应与 v1.0.14 相同；
 3. `aapt dump badging` 确认 `versionCode=16`、`versionName=1.0.15`；
-4. 解包确认 `assets/banks/` 下共 39 个 JSON，且不含任何 `sample/` 路径。
+4. 解包确认 `assets/banks/` 下的题库文件齐全，且不含任何 `sample/` 路径。
 
 ---
 
